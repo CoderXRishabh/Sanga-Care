@@ -7,6 +7,7 @@ import mindsnapCasualImg from "@/imports/mindsnap_casual.png";
 import mindsnapFocusedImg from "@/imports/mindsnap_focused.png";
 import mindsnapExpertImg from "@/imports/mindsnap_expert.png";
 import sangaBrandLogo from "@/imports/sanga_logo.png";
+import sangaLogoTransparent from "@/imports/sanga_logo_transparent.png";
 import * as api from "./api";
 import { initSocketConnection, subscribeSync, disconnectSocket } from "./socket";
 
@@ -430,12 +431,10 @@ function OnboardingScreen({ onContinue }: { onContinue: () => void }) {
       <BambooStrip />
       <div className="flex-1 flex flex-col items-center justify-center px-6 py-10 max-w-md mx-auto w-full gap-8">
         {/* Logo */}
-        <div className="flex flex-col items-center gap-3">
-          <div className="w-24 h-24 rounded-full flex items-center justify-center shadow-lg" style={{ backgroundColor: "#2E6F6E" }}>
-            <span className="font-serif text-[48px] font-bold text-[#FAF6EF]">স্</span>
-          </div>
-          <h1 className="text-[36px] font-black text-[#2B2B2B] tracking-tight">Smriti</h1>
-          <p className="text-[17px] text-[#7A7060] font-medium text-center">Assam &amp; Northeast Dementia Care</p>
+        <div className="flex flex-col items-center gap-2">
+          <img src={sangaLogoTransparent} alt="Sanga Care Logo" className="w-28 h-28 object-contain drop-shadow-sm" />
+          <h1 className="text-[34px] font-black text-[#2B2B2B] tracking-tight">Sanga Care</h1>
+          <p className="text-[16px] text-[#7A7060] font-medium text-center">Assam &amp; Northeast Dementia Care</p>
         </div>
 
         {/* Language picker */}
@@ -638,12 +637,9 @@ function HomeScreen({ onNavigate }: { onNavigate: (screen: Screen) => void; onSe
       <div className="bg-[#2E6F6E] px-6 pt-6 pb-4 text-white flex flex-col gap-6 relative">
         {/* Top bar */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3.5">
-            <img src={sangaBrandLogo} alt="SANGA Logo" className="w-12 h-12 rounded-2xl object-cover shadow-md border-2 border-white/20 flex-shrink-0" />
-            <div>
-              <h2 className="text-[24px] font-black leading-tight text-white">{t(greetingKey)},</h2>
-              <p className="text-[14px] font-bold text-white/80 mt-0.5">{displayName}</p>
-            </div>
+          <div>
+            <h2 className="text-[26px] font-black leading-tight text-white">{t(greetingKey)},</h2>
+            <p className="text-[15px] font-bold text-white/80 mt-0.5">{displayName}</p>
           </div>
 
           <div className="flex items-center gap-3">
@@ -4003,11 +3999,9 @@ function LoginRegisterScreen({ onDone }: { onDone: (role: AuthRole, profile: Use
     <div className="flex flex-col min-h-full bg-[#FAF6EF]">
       <BambooStrip />
       <div className="flex-1 flex flex-col items-center justify-center px-6 py-10 max-w-md mx-auto w-full gap-8">
-        <div className="flex flex-col items-center gap-3">
-          <div className="w-20 h-20 rounded-full flex items-center justify-center bg-[#2E6F6E] shadow-md">
-            <span className="font-serif text-[40px] font-bold text-white">স্</span>
-          </div>
-          <h1 className="text-[36px] font-black text-[#2B2B2B]">Smriti</h1>
+        <div className="flex flex-col items-center gap-2">
+          <img src={sangaLogoTransparent} alt="Sanga Care Logo" className="w-28 h-28 object-contain drop-shadow-sm" />
+          <h1 className="text-[36px] font-black text-[#2B2B2B]">Sanga Care</h1>
           <p className="text-[16px] text-[#7A9B76] font-semibold text-center">Gentle Care &amp; Memory Companion</p>
         </div>
 
