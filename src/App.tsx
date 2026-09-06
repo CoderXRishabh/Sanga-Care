@@ -6,6 +6,7 @@ import sangaThumbnail from "@/imports/sanga_thumbnail.png";
 import mindsnapCasualImg from "@/imports/mindsnap_casual.png";
 import mindsnapFocusedImg from "@/imports/mindsnap_focused.png";
 import mindsnapExpertImg from "@/imports/mindsnap_expert.png";
+import sangaBrandLogo from "@/imports/sanga_logo.png";
 import * as api from "./api";
 import { initSocketConnection, subscribeSync, disconnectSocket } from "./socket";
 
@@ -637,9 +638,12 @@ function HomeScreen({ onNavigate }: { onNavigate: (screen: Screen) => void; onSe
       <div className="bg-[#2E6F6E] px-6 pt-6 pb-4 text-white flex flex-col gap-6 relative">
         {/* Top bar */}
         <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-[26px] font-black leading-tight text-white">{t(greetingKey)},</h2>
-            <p className="text-[15px] font-bold text-white/80 mt-0.5">{displayName}</p>
+          <div className="flex items-center gap-3.5">
+            <img src={sangaBrandLogo} alt="SANGA Logo" className="w-12 h-12 rounded-2xl object-cover shadow-md border-2 border-white/20 flex-shrink-0" />
+            <div>
+              <h2 className="text-[24px] font-black leading-tight text-white">{t(greetingKey)},</h2>
+              <p className="text-[14px] font-bold text-white/80 mt-0.5">{displayName}</p>
+            </div>
           </div>
 
           <div className="flex items-center gap-3">
